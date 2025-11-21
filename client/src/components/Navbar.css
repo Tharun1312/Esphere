@@ -1,0 +1,48 @@
+.navbar {
+  background: #004e85;
+  padding: 12px 32px;
+  color: white;
+  font-family: sans-serif;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  font-size: 16px;
+}
+
+.nav-links li {
+  cursor: pointer;
+}
+
+.nav-right button {
+  border: none;
+  padding: 8px 16px;
+  margin-left: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.post-btn {
+  background: #fea700;
+  color: black;
+  font-weight: bold;
+}
+
+.login-btn {
+  background: white;
+  color: #004e85;
+}

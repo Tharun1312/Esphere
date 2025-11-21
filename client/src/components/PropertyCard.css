@@ -1,0 +1,43 @@
+.property-card {
+  width: 280px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  background: white;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: sans-serif;
+}
+
+.property-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.property-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.details {
+  padding: 12px;
+}
+
+.property-card h3 {
+  margin: 0;
+  color: #004e85;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.location {
+  font-size: 14px;
+  color: #555;
+}
+
+.size {
+  font-size: 14px;
+  color: #888;
+}
