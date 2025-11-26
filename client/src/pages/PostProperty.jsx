@@ -9,18 +9,21 @@ export default function PostProperty() {
   const [category, setCategory] = useState("");
   const [image, setImage] = useState(null);
 
-  // Owner required fields
   const [ownerName, setOwnerName] = useState("");
   const [ownerPhone, setOwnerPhone] = useState("");
   const [ownerEmail, setOwnerEmail] = useState("");
 
-  // ⭐ NEW FIELD
   const [surveyNumber, setSurveyNumber] = useState("");
+
+  // Fraud Data
+  const [fraudInfo, setFraudInfo] = useState(null);
 
   const inputStyle = {
     width: "100%",
-    padding: "10px",
-    marginBottom: "10px"
+    padding: "12px",
+    marginBottom: "12px",
+    borderRadius: "6px",
+    border: "1px solid #ccc",
   };
 
   const handleSubmit = async () => {
@@ -31,11 +34,11 @@ export default function PostProperty() {
     }
 
     if (!title || !price || !location || !size || !description || !category) {
-      return alert("All fields are required!");
+      return alert("All fields are required.");
     }
 
     if (!ownerName || !ownerPhone || !ownerEmail) {
-      return alert("Owner details are required!");
+      return alert("Owner details are required.");
     }
 
     if (!image) {
@@ -49,7 +52,7 @@ export default function PostProperty() {
     formData.append("size", size);
     formData.append("description", description);
     formData.append("category", category);
-    formData.append("surveyNumber", surveyNumber); // ⭐ ADDED
+    formData.append("surveyNumber", surveyNumber);
     formData.append("image", image);
     formData.append("ownerName", ownerName);
     formData.append("ownerPhone", ownerPhone);
@@ -65,27 +68,85 @@ export default function PostProperty() {
       const data = await res.json();
 
       if (res.ok) {
-        alert("Property posted successfully!");
+        // If fraud exists but posting allowed
+        if (data.fraudDetected) {
+          alert(
+            `⚠️ Listing Posted with Warnings\nRisk Score: ${data.riskScore}%\n\n` +
+            `Reasons:\n- ${data.reasons.join("\n- ")}`
+          );
+        } else {
+          alert("Property posted successfully!");
+        }
+
         window.location.href = "/";
       } else {
-        alert(data.message || "Failed to post property");
+        // If server returned fraud warnings
+        if (data.riskScore !== undefined) {
+          setFraudInfo({
+            message: data.message,
+            reasons: data.reasons || [],
+            riskScore: data.riskScore,
+          });
+        } else {
+          alert(data.message || "Failed to post property.");
+        }
       }
     } catch (err) {
       console.error(err);
-      alert("Server error");
+      alert("Server error.");
     }
   };
 
   return (
     <div className="page-container">
-      <h1>Post a Property</h1>
+      <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
+        Post a Property
+      </h1>
 
-      {/* Owner Info */}
-      <input style={inputStyle} placeholder="Your Full Name" value={ownerName} onChange={(e) => setOwnerName(e.target.value)} />
-      <input style={inputStyle} placeholder="Phone Number" value={ownerPhone} onChange={(e) => setOwnerPhone(e.target.value)} />
-      <input style={inputStyle} type="email" placeholder="Email" value={ownerEmail} onChange={(e) => setOwnerEmail(e.target.value)} />
+      {/* Fraud Warning Box */}
+      {fraudInfo && (
+        <div
+          style={{
+            background: "#ffe5e5",
+            border: "1px solid red",
+            borderRadius: "8px",
+            padding: "15px",
+            marginBottom: "15px",
+          }}
+        >
+          <h3 style={{ color: "red" }}>⚠ Fraud Risk Detected</h3>
+          <p><b>Risk Score:</b> {fraudInfo.riskScore}%</p>
+          <p><b>Reason(s):</b></p>
+          <ul>
+            {fraudInfo.reasons.map((r, index) => (
+              <li key={index}>{r}</li>
+            ))}
+          </ul>
+        </div>
+      )}
 
-      {/* NEW FIELD */}
+      {/* Owner Information */}
+      <input
+        style={inputStyle}
+        placeholder="Your Full Name"
+        value={ownerName}
+        onChange={(e) => setOwnerName(e.target.value)}
+      />
+      <input
+        style={inputStyle}
+        placeholder="Phone Number"
+        value={ownerPhone}
+        onChange={(e) => setOwnerPhone(e.target.value)}
+      />
+      <input
+        style={inputStyle}
+        type="email"
+        placeholder="Email"
+        value={ownerEmail}
+        onChange={(e) => setOwnerEmail(e.target.value)}
+      />
+
+      {/* Survey Number */}
       <input
         style={inputStyle}
         placeholder="Survey / House Number"
@@ -93,13 +154,40 @@ export default function PostProperty() {
         onChange={(e) => setSurveyNumber(e.target.value)}
       />
 
-      {/* Property details */}
-      <input style={inputStyle} placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-      <input style={inputStyle} type="number" placeholder="Price (₹)" value={price} onChange={(e) => setPrice(e.target.value)} />
-      <input style={inputStyle} placeholder="Location" value={location} onChange={(e) => setLocation(e.target.value)} />
-      <input style={inputStyle} placeholder="Size (e.g. 1200 sqft)" value={size} onChange={(e) => setSize(e.target.value)} />
+      <input
+        style={inputStyle}
+        placeholder="Title"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
 
-      <select style={inputStyle} value={category} onChange={(e) => setCategory(e.target.value)}>
+      <input
+        style={inputStyle}
+        type="number"
+        placeholder="Price (₹)"
+        value={price}
+        onChange={(e) => setPrice(e.target.value)}
+      />
+
+      <input
+        style={inputStyle}
+        placeholder="Location"
+        value={location}
+        onChange={(e) => setLocation(e.target.value)}
+      />
+
+      <input
+        style={inputStyle}
+        placeholder="Size (e.g. 1200 sqft)"
+        value={size}
+        onChange={(e) => setSize(e.target.value)}
+      />
+
+      <select
+        style={inputStyle}
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+      >
         <option value="">Select Category</option>
         <option value="Buy">Buy</option>
         <option value="Rent">Rent</option>
@@ -107,22 +195,34 @@ export default function PostProperty() {
         <option value="Projects">Projects</option>
       </select>
 
-      <textarea style={{ ...inputStyle, minHeight: "80px" }} placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)} />
+      <textarea
+        style={{ ...inputStyle, minHeight: "90px" }}
+        placeholder="Description"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+      />
 
-      <input type="file" accept="image/*" style={inputStyle} onChange={(e) => setImage(e.target.files[0])} />
+      <input
+        type="file"
+        accept="image/*"
+        style={inputStyle}
+        onChange={(e) => setImage(e.target.files[0])}
+      />
 
       <button
         style={{
-          padding: "12px 20px",
+          padding: "14px",
           background: "#004e85",
           color: "white",
-          border: "none",
-          borderRadius: "4px",
+          width: "100%",
+          borderRadius: "6px",
           cursor: "pointer",
+          fontSize: "16px",
+          marginTop: "10px",
         }}
         onClick={handleSubmit}
       >
-        Submit
+        Submit Property
       </button>
     </div>
   );

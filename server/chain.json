@@ -385,5 +385,410 @@
     },
     "previousHash": "97bd6f3ce5a719d222f0290b50c732a4dab71f4d2b32ceed893f9a629509184a",
     "hash": "426b321487db5bf2316fd343b4e30244375057a7cc1af1cdb82c4781f73727e4"
+  },
+  {
+    "index": 32,
+    "timestamp": "2025-11-25T14:47:57.405Z",
+    "data": {
+      "action": "PURCHASED",
+      "propertyId": "691c744ff1ef727102d08f5e",
+      "title": "house",
+      "token": "TXN-XJMH916NCU"
+    },
+    "previousHash": "426b321487db5bf2316fd343b4e30244375057a7cc1af1cdb82c4781f73727e4",
+    "hash": "73f877cf9392357e0e877553f55014423203428f08929b65b9e4176ad646c3fc"
+  },
+  {
+    "index": 33,
+    "timestamp": "2025-11-25T16:25:38.445Z",
+    "data": {
+      "action": "PURCHASED",
+      "propertyId": "691c7c63ec530f5d63a8c82f",
+      "title": "commercial space",
+      "token": "TXN-Z6051JJYFP"
+    },
+    "previousHash": "73f877cf9392357e0e877553f55014423203428f08929b65b9e4176ad646c3fc",
+    "hash": "28fe10331de379ee21e19e46199b926fe817fcbc4ecbbf2cc72df1b4f1fce796"
+  },
+  {
+    "index": 34,
+    "timestamp": "2025-11-25T16:30:33.889Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925d9a953959c3e3def862e",
+      "title": "rent shop",
+      "ownerName": "ramesh",
+      "ownerPhone": "9849041125",
+      "surveyNumber": "9-10-33/1"
+    },
+    "previousHash": "28fe10331de379ee21e19e46199b926fe817fcbc4ecbbf2cc72df1b4f1fce796",
+    "hash": "02790906001b0022c0f24f7988738bc98e62634a658d7978d2a5a1d330726ab7"
+  },
+  {
+    "index": 35,
+    "timestamp": "2025-11-25T16:31:04.025Z",
+    "data": {
+      "action": "PURCHASED",
+      "propertyId": "6925d9a953959c3e3def862e",
+      "title": "rent shop",
+      "buyerName": "suresh",
+      "buyerPhone": "9977885566",
+      "token": "TXN-8WUTFW4QNR",
+      "timestamp": "2025-11-25T16:31:04.025Z"
+    },
+    "previousHash": "02790906001b0022c0f24f7988738bc98e62634a658d7978d2a5a1d330726ab7",
+    "hash": "836d6d8c54f1d29b91fc0fedbb19d00efa5efe2cacf0ac32d032b7134579daeb"
+  },
+  {
+    "index": 36,
+    "timestamp": "2025-11-25T16:44:28.732Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925dcecfe16d373119898a0",
+      "title": "appartment",
+      "ownerName": "pavan",
+      "ownerPhone": "9849041185",
+      "surveyNumber": "19-10-33/1"
+    },
+    "previousHash": "836d6d8c54f1d29b91fc0fedbb19d00efa5efe2cacf0ac32d032b7134579daeb",
+    "hash": "69b1a607f1e927ee3ec565e475d9bea8cf5784829fe64b7da91e8595a7b08d69"
+  },
+  {
+    "index": 37,
+    "timestamp": "2025-11-25T16:49:44.273Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925de28e47578ebd97c70b1",
+      "title": "shopping mall",
+      "ownerName": "suman",
+      "ownerPhone": "9849041185",
+      "surveyNumber": "19-10-33/1"
+    },
+    "previousHash": "69b1a607f1e927ee3ec565e475d9bea8cf5784829fe64b7da91e8595a7b08d69",
+    "hash": "5d56a38dfa8a36f10ddaddcff1f93cc50047d69c2cd23b64c644df8c061291b8"
+  },
+  {
+    "index": 38,
+    "timestamp": "2025-11-25T17:01:54.247Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925e102256c471db9a54a84",
+      "title": "manoj nilayam",
+      "ownerName": "manoj",
+      "ownerPhone": "9849041185",
+      "surveyNumber": "19-10-33/1"
+    },
+    "previousHash": "5d56a38dfa8a36f10ddaddcff1f93cc50047d69c2cd23b64c644df8c061291b8",
+    "hash": "f5b5befb492d3a84dca0f8d105ea093b5a4b28c3c78b595cc4f9fe7f5b3ed09a"
+  },
+  {
+    "index": 39,
+    "timestamp": "2025-11-25T17:03:01.017Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925e144b23873021bdb6023",
+      "title": "manoj nilayam",
+      "ownerName": "manoj",
+      "ownerPhone": "9849042285",
+      "surveyNumber": "19-10-33/2/b"
+    },
+    "previousHash": "f5b5befb492d3a84dca0f8d105ea093b5a4b28c3c78b595cc4f9fe7f5b3ed09a",
+    "hash": "7fb4e71a3ec838233cbf49556701862a0044c7f638c051eede914f0f819a63f0"
+  },
+  {
+    "index": 40,
+    "timestamp": "2025-11-25T17:03:06.802Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925e14a5a86b2995bea53b0",
+      "title": "manoj nilayam",
+      "ownerName": "manoj",
+      "ownerPhone": "9849042285",
+      "surveyNumber": "19-10-33/2/b"
+    },
+    "previousHash": "7fb4e71a3ec838233cbf49556701862a0044c7f638c051eede914f0f819a63f0",
+    "hash": "086432cdfef17bff61232af920dea90a6304e4d1d0a8b202c87307ec6d3caf35"
+  },
+  {
+    "index": 41,
+    "timestamp": "2025-11-25T17:07:56.531Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925e26cbb145662e77fff59",
+      "title": "Home",
+      "ownerName": "mukesh",
+      "ownerPhone": "9603340209",
+      "surveyNumber": "98/a"
+    },
+    "previousHash": "086432cdfef17bff61232af920dea90a6304e4d1d0a8b202c87307ec6d3caf35",
+    "hash": "7b9503b11648e1365e6081b64bdae9ea171b4a5055abeacb48d7eff1068be834"
+  },
+  {
+    "index": 42,
+    "timestamp": "2025-11-25T17:12:02.620Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925e36213f3db9ec2d7c44b",
+      "title": "home for rent",
+      "ownerName": "kalyanram",
+      "ownerPhone": "7207552273",
+      "surveyNumber": "121/a/b"
+    },
+    "previousHash": "7b9503b11648e1365e6081b64bdae9ea171b4a5055abeacb48d7eff1068be834",
+    "hash": "fae9cf00c9415ba0613377056945e1d608f49688ba6c402bb43278c5697935e1"
+  },
+  {
+    "index": 43,
+    "timestamp": "2025-11-25T17:12:07.022Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925e366a275bc5e3330b35b",
+      "title": "home for rent",
+      "ownerName": "kalyanram",
+      "ownerPhone": "7207552273",
+      "surveyNumber": "121/a/b"
+    },
+    "previousHash": "fae9cf00c9415ba0613377056945e1d608f49688ba6c402bb43278c5697935e1",
+    "hash": "7990a6bc689c80c4df8711d5fd739c4c3cb4228d4755841aee17e2326a9b51a6"
+  },
+  {
+    "index": 44,
+    "timestamp": "2025-11-25T17:12:13.028Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925e36d8e427c8f2974a734",
+      "title": "home for rent",
+      "ownerName": "kalyanram",
+      "ownerPhone": "7207552273",
+      "surveyNumber": "121/a/b"
+    },
+    "previousHash": "7990a6bc689c80c4df8711d5fd739c4c3cb4228d4755841aee17e2326a9b51a6",
+    "hash": "6508b6eaa6f1654c2679f42086c377f6f1b32b1bfc019a524fcbc0e6fadcc918"
+  },
+  {
+    "index": 45,
+    "timestamp": "2025-11-25T17:14:14.980Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925e3e6850ea89c835f6089",
+      "title": "home for rent",
+      "ownerName": "kalyanram",
+      "ownerPhone": "7207552273",
+      "surveyNumber": "121/a/b"
+    },
+    "previousHash": "6508b6eaa6f1654c2679f42086c377f6f1b32b1bfc019a524fcbc0e6fadcc918",
+    "hash": "f0ec3154f078a535dda0f68030050e97bd0870e15e8a3c85b3d547c33beafc05"
+  },
+  {
+    "index": 46,
+    "timestamp": "2025-11-25T17:14:18.146Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925e3ea3e6134425e48880b",
+      "title": "home for rent",
+      "ownerName": "kalyanram",
+      "ownerPhone": "7207552273",
+      "surveyNumber": "121/a/b"
+    },
+    "previousHash": "f0ec3154f078a535dda0f68030050e97bd0870e15e8a3c85b3d547c33beafc05",
+    "hash": "7f0559971ca51c3dbd3ded27859041f73975d502b6ef46dadb952dbb5f04799f"
+  },
+  {
+    "index": 47,
+    "timestamp": "2025-11-25T17:14:18.259Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925e3ea3e6134425e48880f",
+      "title": "home for rent",
+      "ownerName": "kalyanram",
+      "ownerPhone": "7207552273",
+      "surveyNumber": "121/a/b"
+    },
+    "previousHash": "7f0559971ca51c3dbd3ded27859041f73975d502b6ef46dadb952dbb5f04799f",
+    "hash": "cfa15bb1032764805899b4dd487f0b48fdef9c304b97c1b56b59a7eeddb3d363"
+  },
+  {
+    "index": 48,
+    "timestamp": "2025-11-25T17:14:18.572Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925e3ea3e6134425e488813",
+      "title": "home for rent",
+      "ownerName": "kalyanram",
+      "ownerPhone": "7207552273",
+      "surveyNumber": "121/a/b"
+    },
+    "previousHash": "cfa15bb1032764805899b4dd487f0b48fdef9c304b97c1b56b59a7eeddb3d363",
+    "hash": "8ac9d46a824eab3d92b7ea1e8c35acb362ebc70505a91c22dc3a2b0cf01422f1"
+  },
+  {
+    "index": 49,
+    "timestamp": "2025-11-25T17:14:20.595Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925e3ec51691b5cf743ebed",
+      "title": "home for rent",
+      "ownerName": "kalyanram",
+      "ownerPhone": "7207552273",
+      "surveyNumber": "121/a/b"
+    },
+    "previousHash": "8ac9d46a824eab3d92b7ea1e8c35acb362ebc70505a91c22dc3a2b0cf01422f1",
+    "hash": "1e33fa51388c38287d8a0d7974704f73264011910a4604245070f29015401362"
+  },
+  {
+    "index": 50,
+    "timestamp": "2025-11-25T17:16:37.051Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925e4757fa7a11c735107ca",
+      "title": "taram guesthouse",
+      "ownerName": "tarak",
+      "ownerPhone": "9849041185",
+      "surveyNumber": "100-a/3"
+    },
+    "previousHash": "1e33fa51388c38287d8a0d7974704f73264011910a4604245070f29015401362",
+    "hash": "490feb10bca3484e3f38e19be5fc93c343279a11c50d82286431c7ff51b4b893"
+  },
+  {
+    "index": 51,
+    "timestamp": "2025-11-25T17:20:46.217Z",
+    "data": {
+      "action": "PURCHASED",
+      "propertyId": "6925e3e6850ea89c835f6089",
+      "title": "home for rent",
+      "buyerName": "ramudu",
+      "buyerPhone": "9849041185",
+      "token": "TXN-DN68PPPFOJ",
+      "timestamp": "2025-11-25T17:20:46.217Z"
+    },
+    "previousHash": "490feb10bca3484e3f38e19be5fc93c343279a11c50d82286431c7ff51b4b893",
+    "hash": "fc32dd7ac8031a26d9cc882f2b21a8837846c7c96bedd0b9cafc4e36176d3795"
+  },
+  {
+    "index": 52,
+    "timestamp": "2025-11-25T17:22:28.557Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925e5d4800bf41629f39c3c",
+      "title": "land for sale",
+      "ownerName": "haribabu",
+      "ownerPhone": "9849041185",
+      "surveyNumber": "1234-1/1"
+    },
+    "previousHash": "fc32dd7ac8031a26d9cc882f2b21a8837846c7c96bedd0b9cafc4e36176d3795",
+    "hash": "9ac28b4e4b6dbf5843c67763c6490a4e3e48af0f15d3a4152631457cea532c6d"
+  },
+  {
+    "index": 53,
+    "timestamp": "2025-11-25T17:24:06.971Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925e636da259f8795a18446",
+      "title": "land for sale",
+      "ownerName": "haribabu",
+      "ownerPhone": "9849041158",
+      "surveyNumber": "1234-1/1"
+    },
+    "previousHash": "9ac28b4e4b6dbf5843c67763c6490a4e3e48af0f15d3a4152631457cea532c6d",
+    "hash": "260bb4ada1bac275e82ed32f0f9986118ad49488111d6f876e6bfe157ad35c6f"
+  },
+  {
+    "index": 54,
+    "timestamp": "2025-11-25T17:40:25.213Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925ea094ad36af93e8c4df8",
+      "title": "land for rent ",
+      "ownerName": "balu",
+      "ownerPhone": "9849041185",
+      "surveyNumber": "19-10/b"
+    },
+    "previousHash": "260bb4ada1bac275e82ed32f0f9986118ad49488111d6f876e6bfe157ad35c6f",
+    "hash": "4f974e55d89c3cf4feabe6a179f4bc3d8cb0ae37a58ce46307fa257213381d90"
+  },
+  {
+    "index": 55,
+    "timestamp": "2025-11-25T17:45:23.039Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925eb33c2b0605feb555c1f",
+      "title": "appartment",
+      "ownerName": "kamlesh",
+      "ownerPhone": "9849041185",
+      "surveyNumber": "1212/d"
+    },
+    "previousHash": "4f974e55d89c3cf4feabe6a179f4bc3d8cb0ae37a58ce46307fa257213381d90",
+    "hash": "9c54f4fe34f0857f9a389da4a2b2ba3d76e4a89b73c074385b7913c1280506eb"
+  },
+  {
+    "index": 56,
+    "timestamp": "2025-11-25T17:45:40.216Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925eb44658b06166c03db6e",
+      "title": "appartment",
+      "ownerName": "kamlesh",
+      "ownerPhone": "9849041111",
+      "surveyNumber": "1212/d"
+    },
+    "previousHash": "9c54f4fe34f0857f9a389da4a2b2ba3d76e4a89b73c074385b7913c1280506eb",
+    "hash": "65060df9e91dc81b8abd3cdd4a2709f8fd9450b8224fa063945fdabd16338bd3"
+  },
+  {
+    "index": 57,
+    "timestamp": "2025-11-25T17:52:16.408Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925ecd09d63b4f8fd0245a4",
+      "title": "rent ",
+      "ownerName": "revanth",
+      "ownerPhone": "9948316600",
+      "surveyNumber": "129-r"
+    },
+    "previousHash": "65060df9e91dc81b8abd3cdd4a2709f8fd9450b8224fa063945fdabd16338bd3",
+    "hash": "4cfe975f9edf99518a72a4d339a9c0285d567d836c5114b5d245f8541606e108"
+  },
+  {
+    "index": 58,
+    "timestamp": "2025-11-25T17:55:03.552Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "6925ed77f392bff3d74d94dc",
+      "title": "rent",
+      "ownerName": "sudheer",
+      "ownerPhone": "9948316601",
+      "surveyNumber": "129-y"
+    },
+    "previousHash": "4cfe975f9edf99518a72a4d339a9c0285d567d836c5114b5d245f8541606e108",
+    "hash": "f80f67e8a269c368a53146858a6d72ba6531d4bd483861f2a235e94d26597e4d"
+  },
+  {
+    "index": 59,
+    "timestamp": "2025-11-26T17:35:39.202Z",
+    "data": {
+      "action": "CREATED",
+      "propertyId": "69273a6b28ac5432c92a2a86",
+      "title": "2bhk",
+      "ownerName": "CHINTHALA THARUN",
+      "ownerPhone": "7794015157",
+      "surveyNumber": "125-874"
+    },
+    "previousHash": "f80f67e8a269c368a53146858a6d72ba6531d4bd483861f2a235e94d26597e4d",
+    "hash": "382b34d2a4a4717453a31fce1994a3d5a9fb65051d668029e9a6859cc96e179e"
+  },
+  {
+    "index": 60,
+    "timestamp": "2025-11-26T17:36:12.281Z",
+    "data": {
+      "action": "PURCHASED",
+      "propertyId": "69273a6b28ac5432c92a2a86",
+      "title": "2bhk",
+      "buyerName": "tyhgfaun",
+      "buyerPhone": "7794015157",
+      "token": "TXN-UM2BQZMVMY",
+      "timestamp": "2025-11-26T17:36:12.281Z"
+    },
+    "previousHash": "382b34d2a4a4717453a31fce1994a3d5a9fb65051d668029e9a6859cc96e179e",
+    "hash": "5faef812977d1a56c61cb89baa4c56ea394843797fee786dd6f754e6d83a13a6"
   }
 ]

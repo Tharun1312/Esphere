@@ -8,7 +8,7 @@ class Block {
   constructor(index, timestamp, data, previousHash) {
     this.index = index;
     this.timestamp = timestamp;
-    this.data = data; // flexible: create or purchase data
+    this.data = data;
     this.previousHash = previousHash;
     this.hash = this.calculateHash();
   }
@@ -17,7 +17,10 @@ class Block {
     return crypto
       .createHash("sha256")
       .update(
-        this.index + this.timestamp + JSON.stringify(this.data) + this.previousHash
+        this.index +
+        this.timestamp +
+        JSON.stringify(this.data) +
+        this.previousHash
       )
       .digest("hex");
   }
@@ -56,22 +59,53 @@ class Blockchain {
     return this.chain;
   }
 
-  getRecordsForProperty(id) {
-    return this.chain.filter(b => b.data && b.data.propertyId === id);
+  phoneExists(phone) {
+    return this.chain.some(
+      (block) => block.data && block.data.ownerPhone === phone
+    );
   }
 
-  // Only used on property creation
+  // ✔ FIXED: PROPERTY CREATION RECORD
   addPropertyCreationRecord(property) {
+    const { _id, title, ownerName, ownerPhone, surveyNumber } = property;
+
     const lastBlock = this.getLatestBlock();
+
     const newBlock = new Block(
       lastBlock.index + 1,
       new Date().toISOString(),
       {
         action: "CREATED",
-        propertyId: property._id.toString(),
-        title: property.title,
-        owner: property.ownerName,
-        phone: property.ownerPhone,
+        propertyId: _id.toString(),
+        title,
+        ownerName,
+        ownerPhone,
+        surveyNumber
+      },
+      lastBlock.hash
+    );
+
+    this.chain.push(newBlock);
+    this.save();
+
+    return { block: newBlock };
+  }
+
+  // ✔ FIXED: PURCHASE RECORD (now saves buyerName + buyerPhone)
+  addPurchaseRecord(data) {
+    const lastBlock = this.getLatestBlock();
+
+    const newBlock = new Block(
+      lastBlock.index + 1,
+      new Date().toISOString(),
+      {
+        action: data.action,
+        propertyId: data.propertyId,
+        title: data.title,
+        buyerName: data.buyerName,    // ✔ added
+        buyerPhone: data.buyerPhone,  // ✔ added
+        token: data.token,
+        timestamp: data.timestamp,
       },
       lastBlock.hash
     );
@@ -81,26 +115,11 @@ class Blockchain {
     return { block: newBlock };
   }
 
-  // 🔥 Used for purchase transaction
-  addPurchaseRecord({ action, propertyId, title, buyer, token }) {
-    const lastBlock = this.getLatestBlock();
-
-    const newBlock = new Block(
-      lastBlock.index + 1,
-      new Date().toISOString(),
-      {
-        action,
-        propertyId,
-        title,
-        buyer,
-        token,
-      },
-      lastBlock.hash
+  // ✔ Required for certificate + proof
+  getRecordsForProperty(propertyId) {
+    return this.chain.filter(
+      (block) => block.data.propertyId === propertyId
     );
-
-    this.chain.push(newBlock);
-    this.save();
-    return { block: newBlock };
   }
 }
 
